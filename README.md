@@ -1,9 +1,9 @@
-# TypeBeatToVideo for Cloudflare Pages
+# TypeBeatToVideo
 
-1. Extract the ZIP and commit its contents to the root of a GitHub repository.
-2. Create a Cloudflare Pages project using Git integration and select that repository.
-3. Select your production branch and the None framework preset.
-4. Leave the build command blank and set the build output directory to public.
-5. Deploy. The public directory already contains the built website.
+Drag and drop images + audio to quickly render a video file for Type Beat videos. 
 
-Open the deployed HTTPS site to use the app. Video and animated GIF rendering load the FFmpeg WebAssembly engine as needed. Media processing runs in the browser.
+(This does not upload to your YouTube channel, etc. It only gives you a video download)
+
+Use https://typebeattovideo.pages.dev for online demo.
+
+Or download the release and open the .bat which will open a self-hosted version in your browser.
