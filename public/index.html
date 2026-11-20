@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Turn cover artwork and audio into MP4 videos in your browser."><title>TypeBeatToVideo — Artwork + Audio to MP4</title><link rel="stylesheet" href="./style.css"></head>
+<body><header><div class="brand"><span class="logo" aria-hidden="true">▶</span> TypeBeatToVideo</div><button id="settings-open" class="quiet">⚙ Settings</button></header>
+<main>
+<h1>Drag image and audio to turn it into a video quickly.</h1>
+<div class="workspace"><aside class="visual-inputs" aria-label="Visuals and media import">
+<section class="drop" id="drop"><span class="drop-icon" aria-hidden="true">↑</span><h2>Drop images, videos, and audio here</h2><button id="browse" class="primary">Browse files</button><input id="files" type="file" multiple hidden accept=".png,.jpg,.jpeg,.webp,.gif,.bmp,.avif,.mp4,.mov,.webm,.mkv,.m4v,.mp3,.wav,.m4a,.flac,.ogg,.aac,.opus"></section>
+<div id="notice" role="status"></div>
+<section class="artwork-tray" id="artwork-tray" aria-labelledby="artwork-title">
+<div class="queue-head"><div><h2 id="artwork-title">Artwork and clips</h2><p>Drag a visual onto a track.</p></div><button id="clear-artwork" class="quiet" disabled>Clear artwork</button></div>
+<div id="artwork-items" class="artwork-items"></div><p id="artwork-empty">Images and clips you add will appear here.</p>
+</section></aside>
+<section class="queue"><div class="queue-head"><div><h2>Audio tracks and exports <span id="count"></span></h2><p id="queue-summary"></p></div><div class="actions"><button id="clear" class="quiet">Clear queue</button><button id="add">+ Add track</button></div></div>
+<div id="items"></div><div id="empty">Add files to create your first video.</div>
+<div class="queue-foot"><progress id="overall" max="1" value="0" aria-label="Overall render progress" hidden></progress><div class="actions"><button id="zip">Download ZIP</button><button class="primary" id="render-all">Render all</button></div></div></section></div>
+</main>
+<dialog id="settings"><form method="dialog" class="dialog-head"><h2>Export settings</h2><button aria-label="Close settings">×</button></form><div class="settings-grid" id="settings-fields"></div><div class="settings-credit"><a class="link-button" href="https://github.com/polssoftware" target="_blank" rel="noopener noreferrer">polssoftware on GitHub</a><p>Created with A.I.</p></div></dialog>
+<dialog id="preview"><form method="dialog" class="dialog-head"><h2>Preview</h2><button aria-label="Close preview">×</button></form><p id="preview-resolution"></p><div id="preview-frame"><img id="preview-art" alt="Cover artwork" hidden><video id="preview-video" muted playsinline loop hidden></video></div><p id="preview-error" role="status"></p><audio id="preview-audio" controls></audio></dialog>
+<script type="module" src="./app.js"></script></body></html>
+
